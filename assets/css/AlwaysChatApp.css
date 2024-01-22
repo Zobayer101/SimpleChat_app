@@ -1,0 +1,375 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Nunito+Sans:opsz,wght@6..12,500&family=Poppins&family=Roboto&display=swap');
+@import "/css/AlwaysChatApp2.css";
+
+:root{
+    --white:#fff;
+    --Lightwhite:#eee;
+    --indigo:#8717f0;
+    --idigo-drack:#6610f2;
+    --gray:#6c757d;
+    --lightIndigo:#f0c;
+    --lightPast:#0fc;
+    --orginalblue:blue;
+    --orginalRead:red;
+    --drack:#212529;
+    --blue:#0d63fd;
+    --red:#dc3545;
+    --past:#0cf;
+    --NormalBlue:rgb(50, 91, 202);
+    --black:rgba(2, 2, 3, 0.2);
+    --newDrack:#161515;
+    --green:rgb(2, 201, 2);
+    --lightgray:lightgray;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+}
+
+.countiner{
+    height: 100vh;
+    width: 100%;
+    background: var(--white);
+}
+.countiner .chatBox{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template: repeat(6,1fr)/repeat(12,1fr);
+
+}
+.countiner .chatBox .searchBox{
+   background: var(--black);
+   grid-column:1/4 ;
+   grid-row: 1/-1;
+}
+.countiner .chatBox .messageBox{
+    grid-column: 4/-1;
+    grid-row:1/-1;
+    background: var(--white);
+    padding: 3px;
+   
+}
+/* ____________________message box start here_______________ */
+.messageBox .message-hader{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px;
+    border: none;
+    border-radius: 5px 5px 0 0 ;
+    background: var(--NormalBlue);
+}
+.messageBox .message-hader .arrowX {
+    display: none;
+}
+.message-img{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.message-img img{
+    width: 50px;
+    height: 50px;
+    image-resolution: auto;
+    border-radius: 50%;
+}
+.message-img .text h3{
+    color: var(--white);
+    font-size: 18px;
+}
+.message-img .text h5{
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 400;
+}
+.online{
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    border-radius: 50%;
+    left:-10;
+    background:var(--green);
+}
+.message-hader .message-icon{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.message-hader .message-icon i{
+    color: var(--white);
+    font-size: 18px;
+}
+
+/* message box design  */
+
+.messageBox .message-box{
+
+    width: 100%;
+    height: 90vh;
+    border: 1px solid var(--lightgray);
+    padding: 5px;
+    border-radius: 0 0 5px 5px ;
+}
+
+ .message-box .conversation{
+    height: 93%;
+    overflow: auto;
+    border-radius: 10px 10px 0 0 ;
+    box-shadow: inset 0 0 10px 1px rgb(0,0,0,0.3);
+    background: var(--Lightwhite);
+}
+.message-box .sender{
+    width: 100%;
+    border-radius: 0 0 10px 10px ;
+    position: relative;
+    height: 40px;
+    background: var(--NormalBlue);
+}
+.conversation .profile{
+    height: 150px;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.conversation .profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+.conversation .profile .view{
+    display: flex;
+    align-items: center;
+    background: var(--NormalBlue);
+    border-radius: 8px ;
+}
+.conversation .profile .view i{
+    padding: 5px ;
+    
+    color: var(--white);
+   
+
+}
+.conversation .profile .view p{
+    padding: 5px ;
+    color: var(--white);
+}
+.conversation .sendMessage{
+    height: auto ;
+    width: auto;
+    display: flex;
+}
+.sendMessage .avater img{
+    width: 50px ;
+    height: 50px;
+    border-radius: 50px;
+    padding: 8px ;
+}
+.sendMessage .mainmassage{
+    margin-left: 10px;
+    margin-top: 20px ;
+    display: flex;
+    float: left;
+    flex-direction: column;
+    padding: 10px ;
+    border-radius: 0 8px 8px 8px ;
+    background: linear-gradient(45deg, var(--lightIndigo),var(--lightPast));
+}
+.sendMessage .mainmassage .text h4{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+}
+.mainmassage .date p{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 10px;
+    padding-top:8px ;
+} 
+.mainmassage .attuch img{
+    border-radius: 10%;
+    padding: 10px;
+    width: 150px;
+    height: auto;
+}
+ .conversation .outcomemesage{
+    height: auto;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    
+}
+.outcomemesage .imgage img{
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 50%;
+
+}
+ .outcomemesage .textdata{
+    height: auto;
+    width: auto;
+    padding: 10px;
+    margin-top:20px ;
+    margin-right: 10px;
+    border-radius: 8px 0 8px 8px ;
+    background: linear-gradient(45deg,var(--lightIndigo),var(--lightPast));
+ }
+ .outcomemesage .textdata .text h4{
+    color: var(--white);
+    font-weight: 400;
+    font-size: 18px;
+ }
+ .outcomemesage .textdata .localDate p{
+    color: var(--white);
+    font-size: 10px;
+    float: right;
+    padding-top:8px ;
+    font-weight: 400;
+ }
+ .outcomemesage .textdata .attuchment img{
+    width: 150px;
+    height: auto;
+    padding: 10px;
+    border-radius: 10%;
+ }
+
+ /* _______________text or img send _______ */
+
+.sender{
+    width: 100%;
+    height: 100%;
+   display: flex;
+
+   
+}
+.sender .send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0 0 5px ;
+    background:linear-gradient(45deg,var(--lightIndigo),var(--lightPast));
+    height: 100%;
+    width: 60px;
+}
+.sender .send i{
+    color: var(--white);
+    transition: .4s ease;
+}
+.sender .send i:hover{
+    color: var(--lightIndigo);
+    filter: blur(1px);
+}
+.sender .type{
+    display: flex;
+    flex-grow: 2;
+}
+.sender .type input{
+    font-size:16px ;
+    color: var(--gray);
+    width: 100%;
+    padding: 4px;
+    height: 100%;
+    outline: none;
+}
+.sender .type input:focus{
+    border: 1px solid var(--green);
+}
+.sender .atuce{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60px;
+    background:linear-gradient(45deg,var(--lightIndigo),var(--lightPast));
+}
+.sender .atuce i{
+    color: var(--white);
+    font-size: 20px;
+    transition: .4s ease;
+}
+.sender .atuce i:hover{
+    color: var(--lightIndigo);
+    filter: blur(1px);
+}
+.sender .imoji{
+    height: 100%;
+    width: 60px;
+    background:linear-gradient(45deg,var(--lightIndigo),var(--lightPast));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 5px 0;
+}
+.sender .imoji i{
+    color: var(--white);
+    font-size: 20px;
+    transition: .4s ease;
+    
+}
+.sender .imoji i:hover{
+    color: var(--lightIndigo);
+    filter: blur(1px);
+}
+@media screen and (max-width:780px){
+    .countiner .chatBox .messageBox{
+        grid-column: 1/-1;
+    }
+    .countiner .chatBox .messageBox.ChangeChatBox{
+       
+        display: none;
+    }
+   
+    .searchBox{
+        display: none;
+    }
+    .searchBox.ShowSearchBox{
+        display: block;
+        background: var(--black);
+        grid-column: 1/-1 !important;
+        grid-row: 1/-1;
+    }
+    .message-img{
+        margin-left:60px ;
+        
+    }
+    .messageBox .message-hader .arrowX{
+        display: block;
+        position: absolute;
+        height: 85%;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .messageBox .message-hader .arrowX i{
+        color: var(--white);
+        font-size: 24px;
+        transition: .4s ease;
+    }
+    .messageBox .message-hader .arrowX i:hover{
+        color: var(--lightIndigo);
+        filter: blur(2px);
+        text-shadow: 0px 0px 50px var(--gray);
+    }
+}
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always Signup</title>
+    <link rel="stylesheet" href="/css/Signup.css">
+    <link rel="stylesheet" href="/font/css/all.min.css">
+    <link rel="stylesheet" href="/font/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="contuner">
+        <div class="title">
+            <span>Always Signup</span>
+        </div>
+        <form action="/route/api/signup" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <i class="fa fa-user"></i>
+                <input type="text" name="fname" placeholder="First name">
+            </div>
+            <div class="row">
+                <i class="fa fa-user"></i>
+                <input type="text" name="lname" placeholder="Last name">
+            </div>
+            <div class="row">
+                <i class="fa fa-envelope"></i>
+                <input type="email" name="email" placeholder="@email">
+            </div>
+            <div class="row">
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password" placeholder=" Password" >
+            </div>
+            <div class="row">
+                <i class="fa fa-calendar-day"></i>
+                <input type="date" name="birthDay" >
+            </div>
+            <div class="row">
+                <i class="fa fa-mobile"></i>
+                <input type="number" name="phone" placeholder=" Phone">
+            </div>
+           <div class="row">
+            <i class="fa fa-house"></i>
+            <input type="text" name="address" placeholder="City name">
+           </div>
+           <div class="row-file">
+            <i class="fa fa-upload"> </i>
+            <input type="file" name="avatar" >
+           </div>
+           <div class="button">
+            <input type="submit" name="submit" value="Create">
+            <div class="have">
+                <a href="Login">I have a Always?</a>
+            </div>
+           </div>
+        </form>
+    </div>
+
+    <script src=""></script>
+</body>
+</html>

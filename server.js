@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 
 //set a view engine
-app.set('view engine', 'ejs','home.ejs');
+app.set('view engine', 'ejs');
 
 //Data Base connection function call
 DataBase();
@@ -30,6 +30,7 @@ app.use('/',route);
 app.use('/img',express.static(path.relative(__dirname,'assets/img')));
 app.use('/css',express.static(path.relative(__dirname,'assets/css')));
 app.use('/js',express.static(path.relative(__dirname,'assets/js')));
+app.use('/font',express.static(path.relative(__dirname,'assets/font')));
 
 //error handler
 app.use((error,req,res,next)=>{
