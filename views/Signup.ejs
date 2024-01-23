@@ -13,22 +13,29 @@
         <div class="title">
             <span>Always Signup</span>
         </div>
-        <form action="/route/api/signup" method="post" enctype="multipart/form-data">
+        <form id="X" action="/route/api/signup" method="post" enctype="multipart/form-data">
             <div class="row">
                 <i class="fa fa-user"></i>
                 <input type="text" name="fname" placeholder="First name">
+                <p class="error fname-error"></p>
             </div>
             <div class="row">
                 <i class="fa fa-user"></i>
                 <input type="text" name="lname" placeholder="Last name">
+                <p class="error lname-error"></p>
+
             </div>
             <div class="row">
                 <i class="fa fa-envelope"></i>
                 <input type="email" name="email" placeholder="@email">
+                <p class="error email-error"></p>
+
             </div>
             <div class="row">
                 <i class="fa fa-lock"></i>
                 <input type="password" name="password" placeholder=" Password" >
+                <p class="error password-error"></p>
+
             </div>
             <div class="row">
                 <i class="fa fa-calendar-day"></i>
@@ -36,7 +43,9 @@
             </div>
             <div class="row">
                 <i class="fa fa-mobile"></i>
-                <input type="number" name="phone" placeholder=" Phone">
+                <input type="text" name="phone" placeholder=" Phone">
+                <p class="error phone-error"></p>
+
             </div>
            <div class="row">
             <i class="fa fa-house"></i>
@@ -46,6 +55,9 @@
             <i class="fa fa-upload"> </i>
             <input type="file" name="avatar" >
            </div>
+           <p class="error avatars-error"></p>
+
+           <p class="common-error"></p>
            <div class="button">
             <input type="submit" name="submit" value="Create">
             <div class="have">
@@ -55,6 +67,6 @@
         </form>
     </div>
 
-    <script src=""></script>
+    <script src="/js/signup.js"></script>
 </body>
 </html>

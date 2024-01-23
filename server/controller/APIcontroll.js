@@ -7,9 +7,10 @@ const UserDB=require('../model/UsersModel');
 
 
 
+
 //Singup middleware function
 exports.Signup= async (req,res)=>{
-    console.log(req.file);
+    //console.log(req.files[0].filename);
     const Pass= await bcript.hash(req.body.password,10);
     try{
         const user = new UserDB({
@@ -20,7 +21,7 @@ exports.Signup= async (req,res)=>{
             birthDay:req.body.birthDay,
             phone:req.body.phone,
             address:req.body.address,
-            avatar:req.filename,
+            avatar:req.files[0].filename,
             Date: new Date().toLocaleDateString()
 
         })
@@ -32,7 +33,10 @@ exports.Signup= async (req,res)=>{
             userFname:data.fname
         },process.env.JWT_SECRET); 
         res.cookie('user-cookie',Token,{httpOnly:true})
-        res.redirect('/signup')
+        //res.redirect('/signup')
+        res.status(200).json({
+            message:'user was send successfully'
+        })
     }catch(error){
         console.log(`Data save faild ${error}`);
         res.status(403).send(error.message);

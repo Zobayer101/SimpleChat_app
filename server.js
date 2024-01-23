@@ -25,7 +25,8 @@ DataBase();
 
 //Route handller 
 app.use('/',route);
-
+//console.log(__dirname)
+app.use(express.static(path.join(__dirname,'Uplods')))
 // public foulder create
 app.use('/img',express.static(path.relative(__dirname,'assets/img')));
 app.use('/css',express.static(path.relative(__dirname,'assets/css')));
