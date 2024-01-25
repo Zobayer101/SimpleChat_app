@@ -31,4 +31,7 @@ route.post('/route/api/login',controll.Login);
 //Found data 
 route.get('/route/api/retrive',AutheGard,controll.RetriveData);
 
+//Messages send api
+route.post('/route/api/send/message',controll.message);
+
 module.exports=route;

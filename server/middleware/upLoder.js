@@ -3,12 +3,7 @@ const path=require('path');
 const multer=require('multer');
 const createError=require('http-errors');
 
- const Uploders=(
-    SubFolder_path,
-    Support_arr,
-    file_Size,
-    err_message
- )=>{
+ const Uploders=(SubFolder_path, Support_arr, file_Size, err_message)=>{
     //uplod file folder path
     const Uplod_Folder=`./Uplods/${SubFolder_path}/`;
     

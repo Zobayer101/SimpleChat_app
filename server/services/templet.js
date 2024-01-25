@@ -1,3 +1,5 @@
+const axios=require('axios');
+
 
 // Signup templet render
 exports.SignupTemp=(req,res)=>{
@@ -12,8 +14,22 @@ exports.LoginTemp=(req,res)=>{
 
 
 // Inbox templet render
-exports.InboxTemp=(req,res)=>{
-    res.render('Inbox')
+exports.InboxTemp= (req,res)=>{
+    axios.get('http://localhost:3300/route/api/retrive')
+    
+    .then((response)=>{
+            //const User=response.json()
+            console.log(response.data)
+           
+        res.render('Inbox',{
+            User:response,
+        })
+    })
+    .catch((error)=>{
+        res.send(error.message)
+        console.log(error)
+    })
+   
 }
 
 

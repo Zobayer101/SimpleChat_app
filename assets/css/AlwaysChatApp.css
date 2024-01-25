@@ -257,7 +257,7 @@
     width: 100%;
     height: 100%;
    display: flex;
-
+    flex-direction: row-reverse;
    
 }
 .sender .send {
@@ -265,9 +265,16 @@
     align-items: center;
     justify-content: center;
     border-radius: 0px 0 0 5px ;
-    background:linear-gradient(45deg,var(--lightIndigo),var(--lightPast));
+    
     height: 100%;
     width: 60px;
+}
+.sender .send button{
+    width:100%;
+    height: 100%;
+    background:linear-gradient(45deg,var(--lightIndigo),var(--lightPast));
+    border-radius: 0 0 0 5px ;
+    border: none;
 }
 .sender .send i{
     color: var(--white);
@@ -304,6 +311,12 @@
     color: var(--white);
     font-size: 20px;
     transition: .4s ease;
+}
+.sender .atuce input[type="file"]{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
 }
 .sender .atuce i:hover{
     color: var(--lightIndigo);
