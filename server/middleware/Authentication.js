@@ -6,7 +6,7 @@ const AutheGard= async(req,res,next)=>{
         const cookie=req.cookies;
         
         const values=Object.values(cookie);
-        //console.log(values);
+        console.log(cookie);
         const decode= JWT.verify(values[0],process.env.JWT_SECRET);
         
         req.userId=decode.userId;
